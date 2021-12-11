@@ -74,7 +74,6 @@ class DataBaseHandle:
         """Close connection so that the threshold is not exceeded"""
         if self._block:
             return
-        self._connection_users.pop()
 
         if not self._connection_users:
             self._conn.close()
